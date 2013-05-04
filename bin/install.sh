@@ -23,7 +23,7 @@ mkdir -p $ZTO/qemu
 cp $TOL/z_tools/qemu/bios.bin $ZTO/qemu/bios.bin
 cp $TOL/z_tools/qemu/vgabios.bin $ZTO/qemu/vgabios.bin
 
-if [ ! -e $HOS/Q.app ]; then
+if [ ! -e $ZTO/qemu/Q.app ]; then
     echo "Create symlink to Q.app"
     ln -s /Applications/Q.app $ZTO/qemu/Q.app
 fi
