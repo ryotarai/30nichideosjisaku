@@ -55,7 +55,7 @@
 
 それでシェルスクリプトの実行ですがターミナルを開いてください。ターミナルを知らない人は「アプリケーション＞ユーティリティ＞ターミナル」で見つかると思います。そして次の通りに実行してください。
 
->$ curl https://raw.github.com/sandai/30nichideosjisaku/master/bin/install.sh | sh
+>$ curl https://raw.github.com/ryotarai/30nichideosjisaku/master/bin/install.sh | sh
 
 curl〜からの部分をコピーして、ターミナルに貼り付けて実行するだけです。$を入れないようにしてください。
 
