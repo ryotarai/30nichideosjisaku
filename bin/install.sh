@@ -1,27 +1,25 @@
 #!/bin/sh
 
-readonly HOS="${HOME}/HariboteOS"
-readonly PRO="${HOS}/projects"
-readonly TOL="${HOS}/tolset"
-readonly ZTO="${HOS}/z_tools"
+readonly PRO="./projects"
+readonly TOL="./tolset"
+readonly ZTO="./z_tools"
 
 # check HariboteOS
 
-if [ ! -d $HOS ]; then
-    echo "~/以下にHariboteOSディレクトリがありません＞＜"
-    exit 1
-elif [ ! -d $PRO ]; then
-    echo "~/HariboteOS/以下にprojectsディレクトリがありませんぞ＞＜"
+if [ ! -d $PRO ]; then
+    echo "projectsディレクトリがありませんぞ＞＜"
     exit 1
 elif [ ! -d $TOL ]; then
-    echo "~/HariboteOS/以下にtolsetディレクトリがありゃしません＞＜"
+    echo "tolsetディレクトリがありゃしません＞＜"
     exit 1
 elif [ ! -d $ZTO ]; then
-    echo "~/HariboteOS/以下にz_toolsディレクトリがどこにも無な〜い＞＜"
+    echo "z_toolsディレクトリがどこにも無な〜い＞＜"
     exit 1
-elif [ ! -e $HOS/Q.app ]; then
-    echo "~/HariboteOS/以下にQ.appを至急設置するであります＞＜"
-    exit 1
+fi
+
+if [ ! -e $HOS/Q.app ]; then
+    echo "Create symlink to Q.app"
+    ln -s /Applications/Q.app ./Q.app
 fi
 
 # set z_tools
@@ -36,7 +34,7 @@ find . -maxdepth 1 -regex ".*_day" -type d | xargs -J % cp -rp % ../
 cd ../
 
 # set Makefile
-curl -L https://github.com/sandai/30nichideosjisaku/tarball/master | tar xz -C ./
+curl -L https://github.com/ryotarai/30nichideosjisaku/tarball/master | tar xz -C ./
 readonly SANDAI=$(find . -maxdepth 1 -regex ".*sandai-30nichideosjisaku.*" -type d)
 cd $SANDAI
 find . -regex ".*_day" -o -name "z_tools" -maxdepth 1 -type d | xargs -J % cp -rpf % ../
