@@ -65,7 +65,7 @@ curl〜からの部分をコピーして、ターミナルに貼り付けて実�
 
 実行して以下のように表示されていれば成功です。
 
-![image](https://github.com/sandai/30nichideosjisaku/raw/master/bin/img/qemu.png)
+![image](https://github.com/ryotarai/30nichideosjisaku/raw/master/bin/img/qemu.png)
 
 # 4. ちんぷんかんぷんな人のための最初だけ講座
 
@@ -76,7 +76,7 @@ curl〜からの部分をコピーして、ターミナルに貼り付けて実�
 
 helloos.imgをバイナリで書けという鬼畜命令が下るところですね。わからなかったらやらなくてもいいんですが、やるんだったら0xEDエディタを使って書くと良いです。
 
-![image](https://github.com/sandai/30nichideosjisaku/raw/master/bin/img/0xed.png)
+![image](https://github.com/ryotarai/30nichideosjisaku/raw/master/bin/img/0xed.png)
 
 このように書きます。
 
