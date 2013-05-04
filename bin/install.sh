@@ -35,7 +35,7 @@ cd ../
 
 # set Makefile
 curl -L https://github.com/ryotarai/30nichideosjisaku/tarball/master | tar xz -C ./
-readonly SANDAI=$(find . -maxdepth 1 -regex "ryotarai-30nichideosjisaku.*" -type d)
+readonly SANDAI=$(find . -maxdepth 1 -regex "\./ryotarai-30nichideosjisaku.*" -type d)
 cd $SANDAI
 find . -regex ".*_day" -o -name "z_tools" -maxdepth 1 -type d | xargs -J % cp -rpf % ../
 cd ../
